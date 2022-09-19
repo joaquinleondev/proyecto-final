@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color: #DBDBDB;
+  position: relative;
+}
+header {
+  width: 100%;
+  background: radial-gradient(209.5% 209.5% at 56.87% 0%, rgba(55, 34, 115, 0.47) 0%, rgba(232, 194, 63, 0.47) 100%), radial-gradient(185% 6062.4% at 25.83% 85%, #372273 0%, #E8C23F 100%);
+  height: 100px;
+  .header {
+    height: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+      color: #fff;
+      font-weight: 900;
+      font-size: 33px;
+    }
+    .searchWrapper {
+      width: 600px;
+      .searchBar {
+        width: 100%;
+        border: none;
+        border-radius: 23px;
+        padding: 0 10px;
+        height: 30px;
+      }
+      .headingsWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.blur {
+  opacity: 0.3;
+}
+main {
+  width: 80%;
+  margin: 20px auto;
+  .cardsWrapper {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    .productCard {
+      width: 180px;
+      background-color: #fff;
+      padding: 10px;
+      min-height: 260px;
+      height: 100%;
+      .imgProduct {
+        height: 60%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 100%;
+        min-height: 120px;
+        margin: auto;
+      }
+      .priceWrapper {
+        h3 {
+          font-size: 1.5rem;
+          span {
+            font-size: 1rem;
+            color: #50AF5A;
+          }
+        }
+        p {
+          color: #50AF5A;
+          font-size: 1rem;
+          font-weight: 500;
+          display: inline-block;
+        }
+        a {
+          width: 80%;
+          background-color: #E8C23F;
+          color: #000;
+          text-decoration: none;
+          display: block;
+          margin: 5px auto;
+          text-align: center;
+          padding: 5px;
+          border-radius: 10px;
+        }
+      }
+    }
+    .productCard:hover {
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.226);
+    }
+  }
+}
+.cartWrapper {
+  position: absolute;
+  left: -100%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80vw;
+  background-color: #fff;
+  transition: 0.5s ease-out;
+  max-height: 50vh;
+  .cartHeader {
+    background: radial-gradient(209.5% 209.5% at 56.87% 0%, rgba(55, 34, 115, 0.47) 0%, rgba(232, 194, 63, 0.47) 100%), radial-gradient(185% 6062.4% at 25.83% 85%, #372273 0%, #E8C23F 100%);
+    padding: 20px;
+    color: #fff;
+    position: relative;
+    img {
+      position: absolute;
+      width: 20px;
+      right: 10px;
+      top: 10px;
+    }
+  }
+  .productsWrapper {
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: scroll;
+    max-height: 50vh;
+    .productCart {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border-radius: 15px;
+      border: solid 2px #372273;
+      position: relative;
+      img {
+        height: 20px;
+      }
+      .prodImg {
+        display: inline-block;
+        height: 50px;
+        width: 70px;
+      }
+      .precio { 
+        width: 100px;
+      }
+    }
+    .productCard::before {
+      position: absolute;
+      height: 100%;
+      width: 5px;
+      background-color: #372273;
+      content: "";
+    }
+  }
+  .cartFooter {
+    padding: 20px;
+  }
+}
+.active {
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}

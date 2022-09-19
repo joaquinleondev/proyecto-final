@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color: #DBDBDB;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  background: radial-gradient(209.5% 209.5% at 56.87% 0%, rgba(55, 34, 115, 0.47) 0%, rgba(232, 194, 63, 0.47) 100%), radial-gradient(185% 6062.4% at 25.83% 85%, #372273 0%, #E8C23F 100%);
+  height: 100px;
+}
+header .header {
+  height: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header h1 {
+  color: #fff;
+  font-weight: 900;
+  font-size: 33px;
+}
+header .header .searchWrapper {
+  width: 600px;
+}
+header .header .searchWrapper .searchBar {
+  width: 100%;
+  border: none;
+  border-radius: 23px;
+  padding: 0 10px;
+  height: 30px;
+}
+header .header .searchWrapper .headingsWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+header .header .searchWrapper .headingsWrapper a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.blur {
+  opacity: 0.3;
+}
+
+main {
+  width: 80%;
+  margin: 20px auto;
+}
+main .cardsWrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+main .cardsWrapper .productCard {
+  width: 180px;
+  background-color: #fff;
+  padding: 10px;
+  min-height: 260px;
+  height: 100%;
+}
+main .cardsWrapper .productCard .imgProduct {
+  height: 60%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 100%;
+  min-height: 120px;
+  margin: auto;
+}
+main .cardsWrapper .productCard .priceWrapper h3 {
+  font-size: 1.5rem;
+}
+main .cardsWrapper .productCard .priceWrapper h3 span {
+  font-size: 1rem;
+  color: #50AF5A;
+}
+main .cardsWrapper .productCard .priceWrapper p {
+  color: #50AF5A;
+  font-size: 1rem;
+  font-weight: 500;
+  display: inline-block;
+}
+main .cardsWrapper .productCard .priceWrapper a {
+  width: 80%;
+  background-color: #E8C23F;
+  color: #000;
+  text-decoration: none;
+  display: block;
+  margin: 5px auto;
+  text-align: center;
+  padding: 5px;
+  border-radius: 10px;
+}
+main .cardsWrapper .productCard:hover {
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.226);
+}
+
+.cartWrapper {
+  position: absolute;
+  width: 80vw;
+  background-color: #fff;
+  transition: 0.5s ease-out;
+  top: 300px;
+  left: -50%;
+  transform: translateX(-50%);
+}
+.cartWrapper .cartHeader {
+  background: radial-gradient(209.5% 209.5% at 56.87% 0%, rgba(55, 34, 115, 0.47) 0%, rgba(232, 194, 63, 0.47) 100%), radial-gradient(185% 6062.4% at 25.83% 85%, #372273 0%, #E8C23F 100%);
+  padding: 20px;
+  color: #fff;
+  position: relative;
+}
+.cartWrapper .cartHeader img {
+  position: absolute;
+  width: 20px;
+  right: 10px;
+  top: 10px;
+}
+.cartWrapper .productsWrapper {
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.cartWrapper .productsWrapper .productCart {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 15px;
+  border: solid 2px #372273;
+  position: relative;
+}
+.cartWrapper .productsWrapper .productCart img {
+  height: 20px;
+}
+.cartWrapper .productsWrapper .productCart .prodImg {
+  display: inline-block;
+  height: 50px;
+  width: 70px;
+}
+.cartWrapper .productsWrapper .productCart .precio {
+  width: 100px;
+}
+.cartWrapper .productsWrapper .productCard::before {
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  background-color: #372273;
+  content: "";
+}
+.cartWrapper .cartFooter {
+  padding: 20px;
+}
+
+.active {
+  top: 300px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cartFooter h3 {
+  display: inline-block;
+}
+
+.cartFooter button {
+  border: solid #000 2px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: auto;
+}
+
+.cartFooter {
+  display: flex;
+  align-items: center;
+}
